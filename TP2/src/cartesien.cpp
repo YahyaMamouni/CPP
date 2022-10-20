@@ -32,7 +32,7 @@ void Cartesien::convertir(Polaire& p) const{
     double firstVariable = pow(x,2.0);
     double secondVariable = pow(y,2.0);
     p.setDistance(sqrt(firstVariable + secondVariable));
-    p.setAngle(atan2(y,x) * (180/3.14));
+    p.setAngle(atan2(y,x) * (180/M_PI));
 
 }
 

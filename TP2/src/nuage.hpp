@@ -79,6 +79,8 @@ Polaire barycentre_v1 <Polaire> (const Nuage<Polaire> &n){
 template<class whole_element>
 auto barycentre_v2(const whole_element & n){
     // Recovering the type stored in the vector
+    // passing by value_type is always the first thing you should go for & it's clean and much better than template template
+    // Because template template can cause problems so always work with using ... = typename ...::value_type
     using vector_type = typename whole_element::value_type;
     // Init X & Y
     double sumX = 0.0, sumY = 0.0;
